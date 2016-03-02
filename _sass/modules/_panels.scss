@@ -1,0 +1,124 @@
+.panel {
+    overflow: visible;
+    position: relative;
+    background-color: grey;
+    height: 600px;
+    background-size: cover;
+    background-position: center top;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 10px $c-black solid;
+        border-bottom: 0;
+        z-index: 200;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $c-black;
+        opacity: .8;
+        z-index: 100;
+        transition: opacity 0.4s;
+    }
+
+    &.is-active {
+        &:after {
+            opacity: 0;
+        }
+
+        .button,
+        .button-sub {
+            opacity: 1;
+        }
+    }
+}
+
+@for $panel from 10*-1 through -1 {
+    .panel:nth-of-type(#{abs($panel)}) {
+        z-index: $panel + 11;
+    }
+}
+
+.panel--cover {
+    background-image: url("../images/panel--cover.png");
+    background-position: center bottom;
+    height: 550px; // To compensate for navigation
+
+    &:before {
+        display: none;
+    }
+}
+
+.video-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    background-position: center top;
+    background-size: cover;
+}
+
+.panel--intro-video .video-image {
+    background-image: url("../images/panel--intro.jpg");
+}
+
+.panel--meet-jeremy .video-image {
+    background-image: url("../images/panel--meet-jeremy.jpg");
+}
+
+.panel--cooking .video-image {
+    background-image: url("../images/panel--cooking.jpg");
+}
+
+.panel--outro .video-image {
+    background-image: url("../images/panel--outro.jpg");
+}
+
+.panel--map {
+    background-image: url("../images/panel--map.png");
+}
+
+.panel--quote {
+    background-image: url("../images/panel--quote.png");
+}
+
+.panel--ingredients {
+    background-image: url("../images/panel--ingredients.png");
+}
+
+.panel--step-one {
+    background-image: url("../images/panel--step-one.png");
+}
+
+.panel--step-two {
+    background-image: url("../images/panel--step-two.png");
+}
+
+.panel--outro {
+    border-bottom: 10px solid $c-black;
+}
+
+.step-gif {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.icon {
+    font-family: "Guardian Icons";
+}

@@ -1,0 +1,18 @@
+html {
+    background-color: $c-black;
+    padding: 0;
+    border: 0;
+    max-width: 375px;
+    height: 100%;
+    user-select: none;
+}
+
+body {
+    height: 100%;
+    max-width: 375px;
+    font-family: 'Guardian Sans', sans-serif;
+}
+
+.panels {
+    overflow: hidden;
+}

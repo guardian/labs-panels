@@ -1,0 +1,17 @@
+.paid-content-tag {
+    position: absolute;
+    z-index: 20;
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s;
+
+    &.is-shorter {
+        transform: translateY(-79px);
+    }
+
+    &.is-fixed {
+        position: fixed;
+        top: 0;
+    }
+}

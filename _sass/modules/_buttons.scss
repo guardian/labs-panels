@@ -1,0 +1,62 @@
+.button {
+    position: absolute;
+    z-index: 201;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 38px;
+    width: 200px;
+    color: $c-white;
+    background-color: $c-red;
+    border-radius: 19px;
+    padding: 0 10px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.button__label {
+    display: inline-block;
+    margin-top: 9px;
+    font-size: $f-small;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.button__icon {
+    margin-top: 9px;
+    float: right;
+}
+
+.button-sub {
+    height: 34px;
+    background-color: white;
+    border: 2px solid $c-red;
+    border-radius: 19px;
+    width: 140px;
+    padding: 0 10px;
+    z-index: 201;
+    color: $c-red;
+    transition: opacity 0.5s;
+    opacity: 0.2;
+}
+
+.button-sub--play {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 100px;
+}
+
+.button-sub--share {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 34px;
+    padding: 0;
+
+    .button__icon {
+        float: none;
+        text-align: center;
+    }
+}
