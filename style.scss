@@ -1,0 +1,266 @@
+@import "_sass/reset";
+
+$c-red: #e31f26;
+$c-white: #ffffff;
+$c-black: #333333;
+
+$f-small: 16px;
+$f-medium: 28px;
+$f-large: 48px;
+
+@font-face {
+    font-family: 'Guardian Sans';
+    font-weight: lighter;
+    src: url('assets/fonts/GdnSanDS2Lig.otf');
+}
+
+@font-face {
+    font-family: 'Guardian Sans';
+    font-weight: normal;
+    src: url('assets/fonts/GdnSanDS3Reg.otf');
+}
+
+@font-face {
+    font-family: 'Guardian Sans';
+    font-weight: bold;
+    src: url('assets/fonts/GdnSanDS5Sem.otf');
+}
+
+@font-face {
+    font-family: 'Guardian Icons';
+    src: url('assets/fonts/guardianIcons_2014.ttf');
+}
+
+// Base
+html {
+    background-color: $c-black;
+    padding: 0;
+    border: 0;
+    max-width: 375px;
+    height: 100%;
+    user-select: none;
+}
+
+body {
+    height: 100%;
+    max-width: 375px;
+    font-family: 'Guardian Sans', sans-serif;
+}
+
+.nav {
+    width: 375px;
+    display: block;
+}
+
+.panels {
+    overflow: hidden;
+}
+
+// Panels
+.panel {
+    overflow: visible;
+    position: relative;
+    background-color: grey;
+    height: 600px;
+    background-size: cover;
+    background-position: center top;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 10px $c-black solid;
+        border-bottom: 0;
+        z-index: 200;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $c-black;
+        opacity: .8;
+        z-index: 100;
+        transition: opacity 0.4s;
+    }
+
+    &.is-active {
+        &:after {
+            opacity: 0;
+        }
+
+        .button,
+        .button-sub {
+            opacity: 1;
+        }
+    }
+}
+
+@for $panel from 10*-1 through -1 {
+    .panel:nth-of-type(#{abs($panel)}) {
+        z-index: $panel + 11;
+    }
+}
+
+.panel--cover {
+    background-image: url("assets/images/panel--cover.png");
+    background-position: center bottom;
+    height: 550px; // To compensate for navigation
+
+    &:before {
+        display: none;
+    }
+}
+
+.video-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    background-position: center top;
+    background-size: cover;
+}
+
+.panel--intro-video .video-image {
+    background-image: url("assets/images/panel--intro.jpg");
+}
+
+.panel--meet-jeremy .video-image {
+    background-image: url("assets/images/panel--meet-jeremy.jpg");
+}
+
+.panel--cooking .video-image {
+    background-image: url("assets/images/panel--cooking.jpg");
+}
+
+.panel--outro .video-image {
+    background-image: url("assets/images/panel--outro.jpg");
+}
+
+.panel--map {
+    background-image: url("assets/images/panel--map.png");
+}
+
+.panel--quote {
+    background-image: url("assets/images/panel--quote.png");
+}
+
+.panel--ingredients {
+    background-image: url("assets/images/panel--ingredients.png");
+}
+
+.panel--step-one {
+    background-image: url("assets/images/panel--step-one.png");
+}
+
+.panel--step-two {
+    background-image: url("assets/images/panel--step-two.png");
+}
+
+.panel--outro {
+    border-bottom: 10px solid $c-black;
+}
+
+.step-gif {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.icon {
+    font-family: "Guardian Icons";
+}
+
+// Tagger
+.paid-content-tag {
+    position: absolute;
+    z-index: 20;
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s;
+
+    &.is-shorter {
+        transform: translateY(-79px);
+    }
+
+    &.is-fixed {
+        position: fixed;
+        top: 0;
+    }
+}
+
+// Buttons
+.button {
+    position: absolute;
+    z-index: 201;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 38px;
+    width: 200px;
+    color: $c-white;
+    background-color: $c-red;
+    border-radius: 19px;
+    padding: 0 10px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.button__label {
+    display: inline-block;
+    margin-top: 9px;
+    font-size: $f-small;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.button__icon {
+    margin-top: 9px;
+    float: right;
+}
+
+.button-sub {
+    height: 34px;
+    background-color: white;
+    border: 2px solid $c-red;
+    border-radius: 19px;
+    width: 140px;
+    padding: 0 10px;
+    z-index: 201;
+    color: $c-red;
+    transition: opacity 0.5s;
+    opacity: 0.2;
+}
+
+.button-sub--play {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 100px;
+}
+
+.button-sub--share {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 34px;
+    padding: 0;
+
+    .button__icon {
+        float: none;
+        text-align: center;
+    }
+}
