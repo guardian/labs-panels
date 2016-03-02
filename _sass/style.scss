@@ -1,4 +1,4 @@
-@import "_sass/reset";
+@import "vendor/reset";
 
 $c-red: #e31f26;
 $c-white: #ffffff;
@@ -11,24 +11,24 @@ $f-large: 48px;
 @font-face {
     font-family: 'Guardian Sans';
     font-weight: lighter;
-    src: url('assets/fonts/GdnSanDS2Lig.otf');
+    src: url('../fonts/GdnSanDS2Lig.otf');
 }
 
 @font-face {
     font-family: 'Guardian Sans';
     font-weight: normal;
-    src: url('assets/fonts/GdnSanDS3Reg.otf');
+    src: url('../fonts/GdnSanDS3Reg.otf');
 }
 
 @font-face {
     font-family: 'Guardian Sans';
     font-weight: bold;
-    src: url('assets/fonts/GdnSanDS5Sem.otf');
+    src: url('../fonts/GdnSanDS5Sem.otf');
 }
 
 @font-face {
     font-family: 'Guardian Icons';
-    src: url('assets/fonts/guardianIcons_2014.ttf');
+    src: url('../fonts/guardianIcons_2014.ttf');
 }
 
 // Base
@@ -109,7 +109,7 @@ body {
 }
 
 .panel--cover {
-    background-image: url("assets/images/panel--cover.png");
+    background-image: url("../images/panel--cover.png");
     background-position: center bottom;
     height: 550px; // To compensate for navigation
 
@@ -130,39 +130,39 @@ body {
 }
 
 .panel--intro-video .video-image {
-    background-image: url("assets/images/panel--intro.jpg");
+    background-image: url("../images/panel--intro.jpg");
 }
 
 .panel--meet-jeremy .video-image {
-    background-image: url("assets/images/panel--meet-jeremy.jpg");
+    background-image: url("../images/panel--meet-jeremy.jpg");
 }
 
 .panel--cooking .video-image {
-    background-image: url("assets/images/panel--cooking.jpg");
+    background-image: url("../images/panel--cooking.jpg");
 }
 
 .panel--outro .video-image {
-    background-image: url("assets/images/panel--outro.jpg");
+    background-image: url("../images/panel--outro.jpg");
 }
 
 .panel--map {
-    background-image: url("assets/images/panel--map.png");
+    background-image: url("../images/panel--map.png");
 }
 
 .panel--quote {
-    background-image: url("assets/images/panel--quote.png");
+    background-image: url("../images/panel--quote.png");
 }
 
 .panel--ingredients {
-    background-image: url("assets/images/panel--ingredients.png");
+    background-image: url("../images/panel--ingredients.png");
 }
 
 .panel--step-one {
-    background-image: url("assets/images/panel--step-one.png");
+    background-image: url("../images/panel--step-one.png");
 }
 
 .panel--step-two {
-    background-image: url("assets/images/panel--step-two.png");
+    background-image: url("../images/panel--step-two.png");
 }
 
 .panel--outro {
