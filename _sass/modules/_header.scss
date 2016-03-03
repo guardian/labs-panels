@@ -24,7 +24,6 @@
 
 .header__content {
     position: absolute;
-    z-index: 2; // To promote above the blur
     top: 0;
     right: 0;
     left: 0;
@@ -39,6 +38,7 @@
     right: 0;
     margin: 0 auto;
     text-align: center;
+    z-index: 10;
     @include fs-headline();
     color: $c-brand;
 }
@@ -47,5 +47,20 @@
     @include fs-large();
     display: block;
     color: $c-white;
+}
+
+.header__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    display: none;
+
+    @include mq(desktop) {
+        display: block;
+    }
 }
 
