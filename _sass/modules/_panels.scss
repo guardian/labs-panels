@@ -1,7 +1,7 @@
 .panel {
     overflow: visible;
     position: relative;
-    background-color: grey;
+    background-color: aqua;
     background-size: cover;
     background-position: center top;
     padding-top: 140%;
@@ -65,15 +65,6 @@
     }
 }
 
-.panel--cover {
-    background-image: url("../images/panel--cover.png");
-    background-position: center bottom;
-
-    &:before {
-        display: none;
-    }
-}
-
 .video-image {
     position: absolute;
     top: 0;
@@ -83,10 +74,6 @@
     z-index: 4;
     background-position: center top;
     background-size: cover;
-}
-
-.panel--intro-video .video-image {
-    background-image: url("../images/panel--intro.jpg");
 }
 
 .panel--last {
