@@ -1,3 +1,7 @@
+.panels {
+    overflow: hidden;
+}
+
 .panel {
     overflow: visible;
     position: relative;
@@ -56,6 +60,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 10px;
     overflow: hidden;
 }
 
@@ -80,15 +85,17 @@
     border-bottom: 10px solid $c-black;
 }
 
-.step-gif {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    width: 100%;
+// Specific Panels
+.panel__paragraph {
+    @include fs-copy();
+    padding: 10px;
+
+    @include mq(phablet) {
+        padding: 16px 20px;
+    }
 }
 
-.icon {
-    font-family: "Guardian Icons";
+// Specifc to Netflix
+.panel--intro {
+    background-image: url("../images/intro.jpg");
 }

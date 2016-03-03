@@ -1,5 +1,5 @@
 html {
-    background-color: $c-black;
+    background-color: darken($c-black, 10%);
     padding: 0;
     border: 0;
     user-select: none;
@@ -9,6 +9,6 @@ body {
     font-family: 'Guardian Sans', sans-serif;
 }
 
-.panels {
-    overflow: hidden;
+.icon {
+    font-family: "Guardian Icons";
 }
