@@ -1,12 +1,4 @@
-$c-brand: #e31f26;
-
-$c-white: #ffffff;
-$c-black: #333333;
-
-$f-small: 16px;
-$f-medium: 28px;
-$f-large: 48px;
-
+// Breakpoints
 $mq-breakpoints: (
     mobile:          320px,
     mobileLandscape: 480px,
@@ -16,3 +8,38 @@ $mq-breakpoints: (
     leftCol:         1140px,
     wide:            1300px
 );
+
+// Colours
+$c-brand: #e31f26;
+
+$c-white: #ffffff;
+$c-black: #333333;
+
+// Fonts
+
+@mixin fs-headline() {
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: bold;
+
+    @include mq(mobileLandscape) {
+        font-size: 66px;
+        line-height: 62px;
+    }
+
+    @include mq(phablet) {
+        font-size: 88px;
+        line-height: 80px;
+    }
+}
+
+@mixin fs-large() {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: lighter;
+
+    @include mq(phablet) {
+        font-size: 44px;
+        line-height: 44px;
+    }
+}
