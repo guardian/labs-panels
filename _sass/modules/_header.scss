@@ -1,7 +1,19 @@
 .header {
     position: relative;
     padding-top: 140%;
-    background-color: green;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-position: center bottom;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    }
 
     @include mq(mobileLandscape) {
         height: 620px;
@@ -12,6 +24,7 @@
 
 .header__content {
     position: absolute;
+    z-index: 2; // To promote above the blur
     top: 0;
     right: 0;
     left: 0;
