@@ -8,7 +8,7 @@
     height: 38px;
     width: 200px;
     color: $c-white;
-    background-color: $c-red;
+    background-color: $c-brand;
     border-radius: 19px;
     padding: 0 10px;
     opacity: 0;
@@ -31,12 +31,12 @@
 .button-sub {
     height: 34px;
     background-color: white;
-    border: 2px solid $c-red;
+    border: 2px solid $c-brand;
     border-radius: 19px;
     width: 140px;
     padding: 0 10px;
     z-index: 201;
-    color: $c-red;
+    color: $c-brand;
     transition: opacity 0.5s;
     opacity: 0.2;
 }

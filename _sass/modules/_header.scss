@@ -1,10 +1,10 @@
 .header {
     position: relative;
     padding-top: 140%;
+    background-color: red;
 
     @include mq(mobileLandscape) {
         height: 620px;
-        max-width: 620px;
         margin: 0 auto;
         padding-top: 0;
     }
