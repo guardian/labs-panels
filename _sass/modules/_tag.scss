@@ -1,17 +1,24 @@
-.paid-content-tag {
-    position: absolute;
-    z-index: 20;
-    margin-left: 20px;
+.sponsor-tag {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    z-index: 100;
+}
+
+.sponsor-tag__label {
+    color: $c-white;
+    background-color: $c-red;
+    text-align: center;
+    padding: 6px 0;
+}
+
+.sponsor-tag__logo {
     width: 100px;
-    height: auto;
-    transition: transform 0.2s;
+    height: 100px;
+    background-color: $c-white;
+}
 
-    &.is-shorter {
-        transform: translateY(-79px);
-    }
-
-    &.is-fixed {
-        position: fixed;
-        top: 0;
-    }
+.sponsor-tag__image {
+    max-width: 100px;
+    max-height: 100px;
 }
