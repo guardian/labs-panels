@@ -2,9 +2,16 @@
     overflow: visible;
     position: relative;
     background-color: grey;
-    height: 600px;
     background-size: cover;
     background-position: center top;
+    padding-top: 140%;
+
+    @include mq(mobileLandscape) {
+        height: 620px;
+        max-width: 620px;
+        margin: 0 auto;
+        padding-top: 0;
+    }
 
     &:before {
         content: "";
@@ -43,6 +50,15 @@
     }
 }
 
+.panel__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
 @for $panel from 10*-1 through -1 {
     .panel:nth-of-type(#{abs($panel)}) {
         z-index: $panel + 11;
@@ -52,7 +68,6 @@
 .panel--cover {
     background-image: url("../images/panel--cover.png");
     background-position: center bottom;
-    height: 550px; // To compensate for navigation
 
     &:before {
         display: none;
@@ -74,39 +89,7 @@
     background-image: url("../images/panel--intro.jpg");
 }
 
-.panel--meet-jeremy .video-image {
-    background-image: url("../images/panel--meet-jeremy.jpg");
-}
-
-.panel--cooking .video-image {
-    background-image: url("../images/panel--cooking.jpg");
-}
-
-.panel--outro .video-image {
-    background-image: url("../images/panel--outro.jpg");
-}
-
-.panel--map {
-    background-image: url("../images/panel--map.png");
-}
-
-.panel--quote {
-    background-image: url("../images/panel--quote.png");
-}
-
-.panel--ingredients {
-    background-image: url("../images/panel--ingredients.png");
-}
-
-.panel--step-one {
-    background-image: url("../images/panel--step-one.png");
-}
-
-.panel--step-two {
-    background-image: url("../images/panel--step-two.png");
-}
-
-.panel--outro {
+.panel--last {
     border-bottom: 10px solid $c-black;
 }
 

@@ -5,3 +5,13 @@ $c-black: #333333;
 $f-small: 16px;
 $f-medium: 28px;
 $f-large: 48px;
+
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
