@@ -2,7 +2,10 @@
     position: fixed;
     top: 0;
     left: 20px;
+    right: 0;
     z-index: 100;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .sponsor-tag__label {
@@ -10,6 +13,7 @@
     background-color: $c-brand;
     text-align: center;
     padding: 6px 0;
+    width: 100px;
 }
 
 .sponsor-tag__logo {

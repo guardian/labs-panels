@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    padding-top: 140%;
+    padding-bottom: 140%;
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center bottom;
@@ -18,8 +18,21 @@
     @include mq(mobileLandscape) {
         height: 620px;
         margin: 0 auto;
-        padding-top: 0;
+        padding-bottom: 0;
     }
+}
+
+.header__chrome {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    z-index: 20;
+}
+
+.header__guardian-logo {
+    position: absolute;
+    top: 4px;
+    right: 20px;
 }
 
 .header__content {
