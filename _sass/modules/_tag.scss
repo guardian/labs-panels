@@ -10,12 +10,6 @@
     @include mq(mobileLandscape) {
         left: 20px;
     }
-
-    &:hover {
-        .sponsor-tag__logo {
-            transform: translateY(0px);
-        }
-    }
 }
 
 .sponsor-tag__label {
