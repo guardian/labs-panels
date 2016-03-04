@@ -39,7 +39,7 @@
     z-index: 75;
     @include fs-headline();
     color: $c-brand;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
 
     @include mq(phablet) {
         margin-bottom: 102px;
