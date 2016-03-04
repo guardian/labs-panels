@@ -9,12 +9,17 @@
     background-size: cover;
     background-position: center top;
     padding-top: 140%;
+    margin-bottom: -10px;
 
     @include mq(mobileLandscape) {
         height: 610px;
         max-width: 620px;
         margin: 0 auto;
         padding-top: 0;
+    }
+
+    @include mq(phablet) {
+        margin-bottom: 30px;
     }
 
     &:before {
@@ -25,8 +30,7 @@
         right: 0;
         bottom: 0;
         border: 10px $c-black solid;
-        border-bottom: 0;
-        z-index: 200;
+        z-index: 50;
     }
 
     &:after {
@@ -36,7 +40,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: $c-black;
+        background-color: #000;
         opacity: .8;
         z-index: 100;
         transition: opacity 0.4s;

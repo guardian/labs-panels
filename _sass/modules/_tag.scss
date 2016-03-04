@@ -1,11 +1,21 @@
 .sponsor-tag {
     position: fixed;
     top: 0;
-    left: 20px;
+    left: 10px;
     right: 0;
     z-index: 100;
     max-width: 1300px;
     margin: 0 auto;
+
+    @include mq(mobileLandscape) {
+        left: 20px;
+    }
+
+    &:hover {
+        .sponsor-tag__logo {
+            transform: translateY(0px);
+        }
+    }
 }
 
 .sponsor-tag__label {
@@ -14,12 +24,21 @@
     text-align: center;
     padding: 6px 0;
     width: 100px;
+    position: relative;
+    z-index: 5;
 }
 
 .sponsor-tag__logo {
+    display: block;
     width: 100px;
     height: 100px;
     background-color: $c-white;
+    transition: transform 0.2s ease-out;
+    transform: translateY(0px);
+
+    .is-shorter & {
+        transform: translateY(-100px);
+    }
 }
 
 .sponsor-tag__image {

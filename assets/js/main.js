@@ -20,16 +20,10 @@ $(document).ready(function() {
            } 
         });
 
-        if(!$('.nav').visible(true)) {
-            $(".paid-content-tag").addClass("is-fixed");
+        if($(".panel--header").hasClass("is-active")) {
+            $(".sponsor-tag").removeClass("is-shorter");
         } else {
-            $(".paid-content-tag").removeClass("is-fixed");
-        }
-
-        if($(".panel--cover").hasClass("is-active")) {
-            $(".paid-content-tag").removeClass("is-shorter");
-        } else {
-            $(".paid-content-tag").addClass("is-shorter");
+            $(".sponsor-tag").addClass("is-shorter");
         }
     });
 

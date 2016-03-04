@@ -1,11 +1,16 @@
-.header {
-    position: relative;
-    padding-bottom: 140%;
+.panel--header {
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center bottom;
+    max-width: none;
 
-    &:after {
+
+    @include mq(phablet) {
+        margin-bottom: -50px;
+        z-index: 1 !important;
+    }
+
+    &:before {
         content: '';
         position: absolute;
         top: 40%;
@@ -13,12 +18,8 @@
         left: 0;
         right: 0;
         background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
-    }
-
-    @include mq(mobileLandscape) {
-        height: 620px;
-        margin: 0 auto;
-        padding-bottom: 0;
+        border: 0;
+        z-index: 50;
     }
 }
 
@@ -29,37 +30,32 @@
     z-index: 20;
 }
 
-.header__guardian-logo {
-    position: absolute;
-    top: 4px;
-    right: 20px;
-}
-
-.header__content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
 .header__headline {
     position: absolute;
     bottom: 20px;
     left: 0;
     right: 0;
-    margin: 0 auto;
     text-align: center;
-    z-index: 10;
+    z-index: 75;
     @include fs-headline();
     color: $c-brand;
+    margin-bottom: 12px;
+
+    @include mq(phablet) {
+        margin-bottom: 102px;
+    }
 }
 
 .header__lead-in {
     @include fs-large();
     display: block;
     color: $c-white;
+}
+
+.panel--header .button {
+    @include mq(phablet) {
+        bottom: 70px;
+    }
 }
 
 .header__video {
@@ -77,3 +73,12 @@
     }
 }
 
+.header__guardian-logo {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+
+    @include mq(mobileLandscape) {
+        right: 20px;
+    }
+}
