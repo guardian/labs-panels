@@ -54,6 +54,10 @@ $(document).ready(function() {
             $(this).removeClass("is-muted");
         }
     });
+
+    $(".panel__video").click(function() {
+        console.log(this)
+    });
 });
 
 function scrollToAnchor(e) {
