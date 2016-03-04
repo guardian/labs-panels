@@ -32,26 +32,22 @@
     background-color: white;
     border: 2px solid $c-brand;
     border-radius: 19px;
-    width: 140px;
-    padding: 0 10px;
     z-index: 201;
     color: $c-brand;
     transition: opacity 0.5s;
     opacity: 0.2;
-}
+    width: 34px;
 
-.button-sub--play {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    width: 100px;
+    .button__icon {
+        float: none;
+        text-align: center;
+    }
 }
 
 .button-sub--share {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 20px;
-    width: 34px;
     padding: 0;
 
     .button__icon {
