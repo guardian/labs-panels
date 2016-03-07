@@ -39,28 +39,6 @@
     z-index: 20;
 }
 
-.header__headline {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 75;
-    @include fs-headline();
-    color: $c-brand;
-    margin-bottom: 24px;
-
-    @include mq(phablet) {
-        margin-bottom: 102px;
-    }
-}
-
-.header__lead-in {
-    @include fs-large();
-    display: block;
-    color: $c-white;
-}
-
 .panel--header .button {
     bottom: -22px;
 

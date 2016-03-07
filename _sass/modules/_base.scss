@@ -12,3 +12,25 @@ body {
 .icon {
     font-family: "Guardian Icons";
 }
+
+.headline {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 75;
+    @include fs-headline();
+    color: $c-brand;
+    margin-bottom: 24px;
+
+    @include mq(phablet) {
+        margin-bottom: 102px;
+    }
+}
+
+.headline__lead-in {
+    @include fs-large();
+    display: block;
+    color: $c-white;
+}

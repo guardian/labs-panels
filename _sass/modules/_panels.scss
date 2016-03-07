@@ -86,10 +86,6 @@
     background-size: cover;
 }
 
-.panel--last {
-    border-bottom: 10px solid $c-black;
-}
-
 // Specific Panels
 .panel__paragraph {
     @include fs-copy();
@@ -109,4 +105,8 @@
 // Specifc to Netflix
 .panel--intro {
     background-image: url("../images/intro.jpg");
+}
+
+.panel--sponsor {
+    background-image: url("../images/sponsor.jpg");
 }

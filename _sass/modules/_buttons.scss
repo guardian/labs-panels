@@ -41,23 +41,17 @@
     color: $c-brand;
     transition: opacity 0.5s;
     opacity: 0.2;
-    width: 34px;
     cursor: pointer;
+    padding: 0 10px;
 
     &:hover {
         background-color: darken($c-white, 10%);
     }
-
-    .button__icon {
-        float: none;
-        text-align: center;
-    }
 }
 
-.button-sub--share {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.button-sub--textless {
+    height: 34px;
+    width: 34px;
     padding: 0;
 
     .button__icon {

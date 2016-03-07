@@ -1,0 +1,26 @@
+.panel--sponsor {
+    .panel__content:before {
+        content: '';
+        position: absolute;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+        border: 0;
+        z-index: 50;
+    }
+
+    .headline {
+        margin-bottom: 60px;
+    }
+
+    .button-sub {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 30px;
+        width: 200px;
+    }
+}
