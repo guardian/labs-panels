@@ -34,3 +34,16 @@ body {
     display: block;
     color: $c-white;
 }
+
+.credit {
+    color: #676767;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 20px;
+    margin-bottom: 32px;
+    padding: 0 10px;
+
+    @include mq(phablet) {
+        padding: 0;
+    }
+}

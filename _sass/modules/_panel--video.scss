@@ -12,10 +12,13 @@
     .panel__paragraph {
         color: $c-white;
         position: absolute;
-        padding-top: 34px;
+        padding-top: 22px;
+        padding-right: 40px;
         padding-bottom: 42px;
-        bottom: 0px;
-        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+        top: 0px;
+        background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+        transition: opacity 0.2s ease-out;
+        opacity: 1;
     }
 
     .button-sub--share {
@@ -40,16 +43,18 @@
 .button-sub--play,
 .button-sub--sound {
     position: absolute;
-    top: 20px;
     left: 20px;
 }
 
 .button-sub--play {
     width: 100px;
     padding: 0 10px;
+    top: 20px;
 }
 
 .button-sub--sound {
+    bottom: 20px;
+
     .icon {
         display: none;
     }
@@ -59,6 +64,10 @@
     }
 
     &.is-muted {
+        ~ .panel__paragraph {
+            opacity: 0;
+        }
+
         .icon {
             display: block;
         }
