@@ -1,11 +1,22 @@
-.panel--video video {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -999px;
-    right: -999px;
-    bottom: 0;
-    margin: auto;
+.panel--video {
+    video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -999px;
+        right: -999px;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .panel__paragraph {
+        color: $c-white;
+        position: absolute;
+        padding-top: 34px;
+        padding-bottom: 42px;
+        bottom: 0px;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    }
 }
 
 .video__image {
