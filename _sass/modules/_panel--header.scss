@@ -5,9 +5,12 @@
     max-width: none;
     margin-bottom: 0;
 
-    @include mq(desktop) {
-        margin-bottom: -50px;
+    @include mq(phablet) {
         z-index: 1 !important;
+        margin-bottom: -50px;
+    }
+
+    @include mq(desktop) {
         padding-bottom: 60%;
         height: 0;
     }
