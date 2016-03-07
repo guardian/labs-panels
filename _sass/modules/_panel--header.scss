@@ -3,11 +3,17 @@
     background-size: cover;
     background-position: center bottom;
     max-width: none;
+    margin-bottom: 0;
 
-
-    @include mq(phablet) {
+    @include mq(desktop) {
         margin-bottom: -50px;
         z-index: 1 !important;
+        padding-bottom: 60%;
+        height: 0;
+    }
+
+    @include mq(wide) {
+        padding-bottom: 50%;
     }
 
     &:before {
@@ -53,6 +59,8 @@
 }
 
 .panel--header .button {
+    bottom: -22px;
+
     @include mq(phablet) {
         bottom: 70px;
     }

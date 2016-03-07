@@ -30,7 +30,7 @@
         right: 0;
         bottom: 0;
         border: 10px $c-black solid;
-        z-index: 50;
+        z-index: 102;
     }
 
     &:after {
@@ -41,14 +41,12 @@
         left: 0;
         bottom: 0px;
         background-color: #000;
-        opacity: .85;
+        opacity: .5;
         z-index: 100;
         transition: opacity 0.4s;
     }
 
     &.is-active {
-        z-index: 20 !important;
-
         &:after {
             opacity: 0;
         }
