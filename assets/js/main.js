@@ -32,7 +32,7 @@ $(document).ready(function() {
             });
         }
 
-        if($(".panel--header").hasClass("is-active")) {
+        if($(".panel--header").hasClass("is-active") || $(".panel--last").hasClass("is-active")) {
             $(".sponsor-tag").removeClass("is-shorter");
         } else {
             $(".sponsor-tag").addClass("is-shorter");
