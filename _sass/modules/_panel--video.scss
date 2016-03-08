@@ -1,15 +1,4 @@
 .panel--video {
-    video {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -999px;
-        right: -999px;
-        bottom: 0;
-        margin: auto;
-        min-height: 100%;
-    }
-
     .panel__paragraph {
         color: $c-white;
         position: absolute;
@@ -39,6 +28,17 @@
     z-index: 4;
     background-position: center top;
     background-size: cover;
+}
+
+.video {
+    position: absolute;
+    top: -100%;
+    bottom: -100%;
+    left: -100%;
+    right: -100%;
+    margin: auto;
+    min-height: 100%;
+    z-index: 50;
 }
 
 .button-sub--play,
