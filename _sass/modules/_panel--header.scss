@@ -49,16 +49,19 @@
 
 .header__video {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+    top: -40px;
+    bottom: -40px;
+    left: -100%;
+    right: -100%;
+    z-index: 7;
+    display: block;
     margin: auto;
-    display: none;
+    height: auto;
+    min-height: 110%;
+    min-width: 100%;
 
-    @include mq(desktop) {
-        display: block;
+    .is-mobile & {
+        display: none;
     }
 }
 
