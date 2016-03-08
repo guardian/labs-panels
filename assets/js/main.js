@@ -20,6 +20,10 @@ $(document).ready(function() {
         toggleSound($(this));
     });
 
+    $(".button-sub--share").click(function(e) {
+        toggleShareButtons($(this).parent());
+    });
+
     $(".video").click(function() {
         togglePlayState($(this)[0]);
     });
@@ -80,8 +84,20 @@ function setActivePanel() {
              }
         } else {
             $(this).removeClass("is-active");
-        }
+        };
+
+        if (!$(this).hasClass("is-active")) {
+            $(this).find(".is-expanded").removeClass("is-expanded");
+        };
     });
+}
+
+function toggleShareButtons(e) {
+    if (e.hasClass("is-expanded")) {
+        e.removeClass("is-expanded");
+    } else {
+        e.addClass("is-expanded");
+    }
 }
 
 // Video Functions

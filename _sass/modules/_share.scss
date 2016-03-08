@@ -1,0 +1,63 @@
+.share {
+    position: absolute;
+    z-index: 250;
+    width: 36px;
+    height: 36px;
+    top: 20px;
+    right: 20px;
+    transform-origin: center;
+}
+
+.button-sub--share,
+.button-sub--share--facebook,
+.button-sub--share--twitter {
+    position: absolute;
+    transition: transform 0.3s ease-out;
+}
+
+.button-sub--share {
+    z-index: 300;
+
+    .icon--close {
+        display: none;
+    }
+
+    .is-expanded & {
+        .icon--share {
+            display: none;
+        }
+
+        .icon--close {
+            display: block;
+        }
+    }
+}
+
+.button-sub--share--facebook {
+    color: $c-facebook;
+    border-color: $c-facebook;
+}
+
+.button-sub--share--twitter {
+    color: $c-twitter;
+    border-color: $c-twitter;
+}
+
+.button-sub--share--facebook,
+.button-sub--share--twitter {
+    opacity: 0;
+
+    .is-active & {
+        opacity: 1;
+    }
+}
+
+.is-expanded {
+    .button-sub--share--facebook {
+        transform: translate(-48px, 12px);
+    }
+
+    .button-sub--share--twitter {
+        transform: translate(-12px, 48px);
+    }
+}

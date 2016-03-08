@@ -14,6 +14,7 @@
     opacity: 0;
     transition: opacity 0.2s;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
         background-color: darken($c-brand, 10%);
@@ -33,6 +34,7 @@
 }
 
 .button-sub {
+    display: block;
     height: 34px;
     background-color: $c-white;
     border: 2px solid $c-brand;
@@ -43,6 +45,7 @@
     opacity: 0.2;
     cursor: pointer;
     padding: 0 10px;
+    text-decoration: none;
 
     &:hover {
         background-color: darken($c-white, 10%);
