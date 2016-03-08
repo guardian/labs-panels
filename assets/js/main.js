@@ -122,8 +122,10 @@ function toggleSound(e) {
 function togglePlayState(e) {
     if (e.paused) {
         playVideo(e);
+        showDescription(true);
     } else {
         pauseVideo(e);
+        showDescription(false);
     }
 }
 
