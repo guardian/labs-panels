@@ -3,12 +3,20 @@
         color: $c-white;
         position: absolute;
         padding-top: 22px;
-        padding-right: 40px;
+        padding-right: 60px;
         padding-bottom: 42px;
         top: 0px;
         background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
-        transition: opacity 0.2s ease-out;
+        transition: opacity 0.2s ease-out, transform 0.4s ease-out;
         opacity: 1;
+        z-index: 7;
+        pointer-events: none;
+        transform: translateY(0%);
+    }
+
+    &.has-description .panel__paragraph {
+        opacity: 0;
+        transform: translateY(-100%);
     }
 
     .button-sub--share {
@@ -38,7 +46,7 @@
     right: -100%;
     margin: auto;
     min-height: 100%;
-    z-index: 50;
+    z-index: 5;
 }
 
 .button-sub--play,
@@ -64,11 +72,7 @@
         display: block;
     }
 
-    &.is-muted {
-        ~ .panel__paragraph {
-            opacity: 0;
-        }
-
+    .is-muted & {
         .icon {
             display: block;
         }

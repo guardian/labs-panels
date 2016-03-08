@@ -98,14 +98,24 @@ function autoPlayVideoOnDesktop() {
     }
 }
 
+function showDescription(show) {
+    if (show) {
+        $(".is-active").addClass("has-description");
+    } else {
+        $(".is-active").removeClass("has-description");
+    }
+}
+
 function toggleSound(e) {
     var video = e.siblings(".video");
     if (video.get(0).muted) {
         video.prop('muted', false);
-        e.addClass("is-muted");
+        e.parents(".panel").addClass("is-muted");
+        showDescription(true);
     } else {
         video.prop('muted', true);
-        e.removeClass("is-muted");
+        e.parents(".panel").removeClass("is-muted");
+        showDescription(false);
     }
 }
 
