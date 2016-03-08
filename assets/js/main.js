@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // checkDeviceType();
+    checkDeviceType();
 
     $(window).on('scroll', function() {
         setActivePanel();
@@ -12,6 +12,7 @@ $(document).ready(function() {
     });
 
     $(".button-sub--play").click(function() {
+        $(this).siblings("video").prop("muted", false);
         playVideo($(this).siblings(".video").get(0));
     });
 
