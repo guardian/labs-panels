@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    checkDeviceType();
+    // checkDeviceType();
 
     $(window).on('scroll', function() {
         setActivePanel();
@@ -85,7 +85,7 @@ function setActivePanel() {
 
 // Video Functions
 function autoPlayVideoOnDesktop() {
-    if (isMobile.any() == false) {
+    if ($("body").hasClass("is-desktop")) {
         $(".panel--video").each(function() {
             var video = $(this).find(".video")[0];
 
