@@ -26,9 +26,22 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+        background: linear-gradient(rgba(17,17,17,0), rgba(17,17,17,1));
         border: 0;
         z-index: 50;
+    }
+
+    &:after {
+        z-index: 25;
+    }
+
+    .headline {
+        transition: opacity 0.3s ease-out;
+        opacity: 0;
+    }
+
+    &.is-active .headline {
+        opacity: 1;
     }
 }
 

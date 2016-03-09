@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     $(window).on('scroll', function() {
         setActivePanel();
+        pauseHeaderVideo();
         autoPlayVideoOnDesktop();
         toggleTag();
     });
@@ -112,6 +113,14 @@ function autoPlayVideoOnDesktop() {
                 pauseVideo(video);
             }
         });
+    }
+}
+
+function pauseHeaderVideo() {
+    if($(".is-active").hasClass("panel--header")) {
+        playVideo($(".header__video").get(0));
+    } else {
+        pauseVideo($(".header__video").get(0));
     }
 }
 
