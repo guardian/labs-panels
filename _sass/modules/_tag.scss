@@ -7,6 +7,12 @@
     max-width: 1300px;
     height: 0;
     margin: 0 auto;
+    transition: transform 0.2s ease-out;
+    transform: translateY(0px);
+
+    &.is-shorter {
+        transform: translateY(-140px);
+    }
 }
 
 .sponsor-tag__label {
@@ -24,12 +30,6 @@
     width: 100px;
     height: 100px;
     background-color: $c-white;
-    transition: transform 0.2s ease-out;
-    transform: translateY(0px);
-
-    .is-shorter & {
-        transform: translateY(-100px);
-    }
 }
 
 .sponsor-tag__image {
