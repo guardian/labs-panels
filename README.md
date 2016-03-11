@@ -18,7 +18,7 @@ Each panel is a different `li` element inside `<ul class="panels">`. The basic m
     </div>
     <div class="button">
         <div class="button__label">Label for button</div>
-        <div class="button__icon icon"> &#57345;</div>
+        <div class="button__icon icon">&#57345;</div>
     </div>
 </li>
 ```
@@ -58,7 +58,7 @@ Each panel is a different `li` element inside `<ul class="panels">`. The basic m
     </div>
     <div class="button">
         <div class="button__label">Label for button</div>
-        <div class="button__icon icon"> &#57345;</div>
+        <div class="button__icon icon">&#57345;</div>
     </div>
 </li>
 ```
@@ -73,7 +73,7 @@ Each panel is a different `li` element inside `<ul class="panels">`. The basic m
         </h1>
         <a class="button-sub button-sub--sponsor" href="a.link.to/sponsors/website" target="_blank">
             <div class="button__label">Label for button</div>
-            <div class="button__icon icon"> &#57345;</div>
+            <div class="button__icon icon">&#57345;</div>
         </a>
     </div>
 </li>
