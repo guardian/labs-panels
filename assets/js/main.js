@@ -116,6 +116,14 @@ function autoPlayVideoOnDesktop() {
     }
 }
 
+function closeWhenDone(e) {
+    console.log(e);
+    $(e).one("ended", function() {
+        console.log("ended");
+        e.webkitExitFullscreen();
+    });
+}
+
 function pauseHeaderVideo() {
     if($(".is-active").hasClass("panel--header")) {
         playVideo($(".header__video").get(0));
@@ -161,4 +169,5 @@ function pauseVideo(e) {
 
 function playVideo(e) {
     e.play();
+    closeWhenDone(e);
 }
